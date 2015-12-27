@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateFaqsTable extends Migration {
+
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('faqs', function(Blueprint $table)
+		{
+            $table->increments('id');
+            $table->integer('pro_id');
+            $table->string('ques_title');
+            $table->text('ques_content');
+            $table->text('answer');
+            $table->timestamps();
+		});
+	}
+
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::drop('faqs');
+	}
+
+}

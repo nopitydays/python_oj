@@ -1,0 +1,44 @@
+// coloring
+.pyoj-navbar{
+  color:$nav-fg-color;
+  background:$nav-bg-color;
+
+  .navbar-brand,
+  .navbar-nav > li > a{
+    color:$nav-fg-color;
+
+    &:hover,
+    &:focus{
+      color:lighten($nav-fg-color, 20%);
+    }
+  }
+}
+
+// styling
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover{
+  color:$nav-fg-color;
+  background-color:transparent;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover{
+  color:$nav-fg-color;
+  background-color:darken($nav-bg-color, 30%);;
+}
+
+
+.pyoj-navbar{
+  border:none;
+  box-shadow:0 1px 3px $nav-bg-color;
+}
+
+// responsive
+@media (min-width: 768px){
+  .navbar-right{
+    margin-right:0;
+  }
+}

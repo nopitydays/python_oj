@@ -1,0 +1,51 @@
+.thumbnail{
+  height:100%;
+  padding:2rem 1rem;
+  text-align: center;
+  background:rgba(255,255,255,0.5);
+  .fa{
+    margin:auto;
+    &::before{
+      color:darken($body-fg-color, 80%);
+      font-size: 120px;
+    }
+  }
+  .caption{
+    word-break: break-all;
+  }
+}
+
+.equal-height-line{
+  display: flex;
+  align-items: stretch;
+}
+
+.home-content>.row{
+  min-height:100vh;
+  padding:10% 0;
+  &:first-child{
+    padding-top:5vh;
+    padding-bottom: 10vh;
+  }
+  h1{
+    text-align: center;
+    &::after{
+      width: 90%;
+      height: 3px;
+      display: block;
+      margin: 4px auto;
+      content: "\200b";
+      background: white;
+      opacity: 0.5;
+    }
+  }
+}
+
+.equal-height-line.col-md-12>div{
+  &:first-child{
+    padding-left: 0;
+  }
+  &:last-child{
+    padding-right: 0;
+  }
+}

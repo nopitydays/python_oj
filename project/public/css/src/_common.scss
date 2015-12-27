@@ -1,0 +1,45 @@
+body{
+  color:$body-fg-color;
+  background:$body-bg-color;
+  background-image: url("../image/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.btn,
+.dropdown-menu,
+.nav-pills > li > a,
+.thumbnail{
+  border-radius:0;
+}
+
+.nav-pills > li{
+  background:lighten($body-bg-color,40%);
+}
+
+table{
+  margin:2rem auto;
+  color:darken($body-fg-color, 75%);
+  background:rgba(255,255,255,0.4);
+  &.table-striped > tbody > tr:nth-of-type(2n+1){
+    background:rgba(255,255,255,0.6);
+  }
+  &.table > thead > tr > th{
+    border-bottom-color: rgba(255,255,255,0.8);
+  }
+}
+
+.btn-info{
+  background-color: rgb(29,211,205) ;
+  border-color: darken(rgb(29,211,205), 5%);
+}
+
+form{
+  padding:0 5vw;
+}
+
+.panel-color{
+  color: #00232c;
+}
+

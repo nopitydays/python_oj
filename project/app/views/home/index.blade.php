@@ -1,0 +1,92 @@
+@extends('_layouts.default')
+
+@section('main')
+    <p>    {{Notification::showAll()}}
+    </p>
+    <div class="container-fluid home-content">
+      <div class="row" data-scroll-index="0">
+        <div class="col-md-12">
+          <h1>An excellent Python Online Judge</h1>
+        </div>
+        <div class="equal-height-line col-md-12">
+          <div class="col-md-7">
+            <div id="home-slider">
+              <ul class="bjqs">
+                <li>
+                  <img src="/image/home-cover.png" alt="home-cover" title="Slider Pic #1">
+                </li>
+                <li>
+                  <img src="/image/home-cover.png" alt="home-cover" title="Slider Pic #2">
+                </li>
+                <li>
+                  <img src="/image/home-cover.png" alt="home-cover" title="Slider Pic #3">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <h2>一个专门为初学者打造的 python 自学平台，旨在促进自主学习能力，提高 python 语言技巧<h2>
+          </div>
+        </div>
+      </div>
+      <div class="row equal-height" data-scroll-index="1">
+        <div class="col-md-12">
+          <h1>Features</h1>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <i class="fa fa-pencil"></i>
+            <div class="caption">
+              <h2>轻易编辑</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam adipisci id saepe blanditiis, ullam obcaecati excepturi eum nobis nemo est itaque earum ut exercitationem dignissimos facilis, omnis magnam, velit enim.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <i class="fa fa-tasks"></i>
+            <div class="caption">
+              <h2>大量习题</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut quis consequatur facilis, quo vero! Laudantium beatae tempore et, quia fugiat sint! At maxime sunt atque non iure, veniam unde laborum.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <i class="fa fa-book"></i>
+            <div class="caption">
+              <h2>教材关联</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo totam nulla blanditiis hic accusantium autem ratione quisquam aut voluptatem facere impedit, est, et nesciunt sequi vero laboriosam recusandae ipsum illum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" data-scroll-index="2">
+        <div class="col-xs-12">
+          <h1>Python - Easying-using language</h1>
+        </div>
+        <div class="col-xs-2">
+          <div class="thumbnail"><img src="/image/python-icon.jpg" alt="python-icon"></div>
+        </div>
+        <div class="col-xs-10">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam impedit nobis cupiditate obcaecati iusto tempore dolorum ad voluptatibus, ratione unde magnam, illo sit quas ut sequi aliquid consequatur. Facilis, repellat!</p>
+        </div>
+      </div>
+    </div>
+    <script src="{{ URL::asset('assets/js/scrollIt.min.js') }}" type="application/javascript"></script>
+    <script src="{{ URL::asset('assets/js/bjqs-1.3.min.js') }}" type="application/javascript"></script>
+    <script type="application/javascript">
+      $.scrollIt();
+
+      jQuery(document).ready(function($) {
+      	$('#home-slider').bjqs({
+      		'height' : 320,
+      		'width' : 620,
+      		'responsive' : true,
+          'usecaptions' : true,
+          'keyboardnav' : true,
+          'hoverpause' : true
+      	});
+      });
+    </script>
+@stop

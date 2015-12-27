@@ -1,0 +1,20 @@
+.title>h1{
+  color:#fff;
+}
+#onepage.onepage{
+  height:0;
+  opacity:0;
+  font-size: 0;
+  transform: scale(0);
+  transform-origin: left top;
+  transition:all .3s ease;
+  border-radius: none;
+  background-color: rgba(0,0,0,0);
+  &.active{
+    height:auto;
+    opacity:1;
+    font-size: 1.3rem;
+    transform: scale(1);
+    background-color: rgba(0,0,0,0.6);
+  }
+}
